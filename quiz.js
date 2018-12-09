@@ -1,5 +1,5 @@
 (function() {
-
+    
     // adding some questions
     const myQuestions = [
         {
@@ -22,6 +22,11 @@
             correctAnswer: 'c'
         }
     ];
+    
+    // selecting required HTML elements
+    const quizContainer = document.getElementById('quiz');
+    const resultsContainer = document.getElementById('results');
+    const submitButton = document.getElementById('submit');
 
     // functions declaration
     
@@ -30,34 +35,32 @@
         const output = [];
 
         // for each question...
-        myQuestions.forEach(
-            (currentQuestion, questionNumber) => {
-                // we will want to store the list of answer choices
-                const answers = [];
+        myQuestions.forEach((currentQuestion, questionNumber) => {
+            // we will want to store the list of answer choices
+            const answers = [];
 
-                // and for each available answer...
-                for(letter in currentQuestion.answers){
-                    // add an HTML radio button
-                    answers.push(
-                        `<label>
-                            <input type="radio" name="question${questionNumber}" value="$letter">
-                            ${letter} : ${currentQuestion.answers[letter]}
-                        </label>`
-                    );
-                }
-                
-                // add this question and its answer to the output, with slide effect
-
-                output.push(
-                    `<div class="slide">
-                        <div class="question"> ${currentQuestion.question} </div>
-                        <div class="answers"> ${answers.join("")} </div>
-                    </div>`
+            // and for each available answer...
+            for(letter in currentQuestion.answers){
+                // add an HTML radio button
+                answers.push(
+                    `<label>
+                        <input type="radio" name="question${questionNumber}" value="${letter}">
+                        ${letter} :
+                        ${currentQuestion.answers[letter]}
+                    </label>`
                 );
-                
             }
             
-        );
+            // add this question and its answer to the output, with slide effect
+
+            output.push(
+                `<div class="slide">
+                    <div class="question"> ${currentQuestion.question} </div>
+                    <div class="answers"> ${answers.join("")} </div>
+                </div>`
+            );
+                
+        });
 
         // combine our output list into one string of HTML and put it on the page
         quizContainer.innerHTML = output.join("");
@@ -93,8 +96,14 @@
         resultsContainer.innerHTML = numCorrect + ' out of ' + myQuestions.length;
     }
 
+    // pagination
+    const previousButton = document.getElementById('previous');
+    const nextButton = document.getElementById('next');
+    const slides = document.querySelectorAll(".slide");
+    let currentSlide = 0;
+
     function showSlide(n) {
-        slides[currentSlide].classList.remove('active-slide');
+        slides[currentSlide].classList.remove("active-slide");
         slides[n].classList.add('active-slide');
         currentSlide = n;
         if (currentSlide === n) {
@@ -119,10 +128,7 @@
         showSlide(currentSlide-1);
     }
 
-    // selecting required HTML elements
-    const quizContainer = document.getElementById('quiz');
-    const resultsContainer = document.getElementById('results');
-    const submitButton = document.getElementById('submit');
+
 
     //let's display the quiz right away
     buildQuiz();
@@ -133,14 +139,10 @@
     nextButton.addEventListener('click', showNextSlide);
     
 
-    // pagination
-    const previousButton = document.getElementById('previous');
-    const nextButton = document.getElementById('next');
-    const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
+
 
 
 
     showSlide(0);
 
-}) ();
+})();
