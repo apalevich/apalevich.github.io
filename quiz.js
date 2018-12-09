@@ -20,6 +20,16 @@
                 d: 'Spring'
             },
             correctAnswer: 'c'
+        },
+        {
+            question: 'Who sang The bird song?',
+            answers: {
+                a: 'Homer Simpson',
+                b: 'Peter Griffin',
+                c: 'Harry Potter',
+                d: 'The Aquaman'
+            },
+            correctAnswer: 'b'
         }
     ];
 
@@ -76,7 +86,7 @@
 
                 // find selected answer
                 const answerContainer = answerContainers[questionNumber];
-                const selector = 'input[name:question'+questionNumber+']:checked';
+                const selector = `input[name=question${questionNumber}]:checked`;
                 const userAnswer = (answerContainer.querySelector(selector) || {}).value;
 
                 // if answer is correct
@@ -97,11 +107,13 @@
         slides[currentSlide].classList.remove("active-slide");
         slides[n].classList.add('active-slide');
         currentSlide = n;
-        if (currentSlide === n) {
+
+        if (currentSlide === 0) {
             previousButton.style.display = 'none';
         } else {
             previousButton.style.display = 'inline-block';
         }
+
         if (currentSlide === slides.length - 1) {
             nextButton.style.display = 'none';
             submitButton.style.display = 'inline-block';
