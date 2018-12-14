@@ -1,24 +1,3 @@
-const logo = document.getElementsByClassName('t446__logo t-title');
-
-let colors = [
-    'red',
-    'blue',
-    'orange',
-    'green'
-]
-
-let currentIndex = 0;
-
-function switcher(data, element) {
-    element.addEventListener('click', element.style.color = data[currentIndex]);
-    currentIndex ++;
-    if (currentIndex === data.length-1) {
-        currentIndex = 0;
-    } else {
-        currentIndex++;
-    }
-}
-
 let outlay = [
     {
         name: 'Виза на въезд',
