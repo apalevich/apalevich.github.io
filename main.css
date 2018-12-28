@@ -10,14 +10,10 @@ main {
 .container {
     display: table-cell;
     vertical-align: middle;
-    border: 1px;
-    background-color: purple
 }
 
 .content {
     margin-left: auto;
     margin-right: auto;
     width: 400px;
-    border: 2px;
-    background-color: blue;
 }

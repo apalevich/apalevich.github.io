@@ -1,8 +1,44 @@
-html, body {
-    width: 100vh;
-    height: 100vh;
+body {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 }
 
-.main-container {
-    
+.container {
+    display: table-cell;
+    vertical-align: middle;
+    border: 1px;
+    background-color: #efefef;
+}
+
+.input {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    border: 2px;
+    background-color: #ffffff;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+}
+
+.output {
+    text-align: center; 
+    margin: 20px;
+}
+
+.button {
+    text-align: center; 
+    margin: 20px;
+}
+
+form {
+    width: 100%;
+}
+
+input {
+    margin-bottom: 10px;
 }
