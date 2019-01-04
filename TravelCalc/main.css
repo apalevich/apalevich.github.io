@@ -23,11 +23,19 @@ body {
     padding-top: 15px;
     padding-left: 10px;
     padding-bottom: 15px;
+    align-content: center;
 }
 
 .output {
+    margin-left: auto;
+    margin-right: auto;
     text-align: center; 
-    margin: 20px;
+    margin: 10px auto;
+    background-color: #ffffff;
+    width: 500px;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-bottom: 15px;
 }
 
 .button {
@@ -41,4 +49,14 @@ form {
 
 input {
     margin-bottom: 10px;
+}
+
+table {
+    border: 2px dotted green;
+}
+
+th, td {
+    vertical-align: top;
+    align-content : center;
+    padding: 5px;
 }
