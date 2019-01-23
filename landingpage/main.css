@@ -1,0 +1,146 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+}
+
+header {
+    background-color: #FBFBFB;
+    height: 100px;
+}
+
+.fixed-width {
+    max-width: 1260px;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 100%;
+}
+
+nav {
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+#contact-container {
+    height: 100%;
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#phone {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#order-call {
+    border: 1px solid rgb(252, 85, 124);
+    color: rgb(252, 85, 124);
+    padding: 12px 40px 10px;
+    margin-left: 30px;
+    background-color: #FBFBFB;
+    letter-spacing: .1px;
+}
+
+#order-call:hover {
+    border: 1px solid rgb(252, 85, 124);
+    color: #FBFBFB;
+    background-color: rgb(252, 85, 124);
+}
+
+#welcome-screen {
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#headings {
+    /* margin-top: -20%; */
+    float: left;
+}
+
+h1 {
+    font-size: 46px;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+h2 {
+}
+
+button {
+    border: 1px solid rgb(252, 85, 124);
+    color: rgb(252, 85, 124);
+    padding: 12px 40px 10px;
+    background-color: #FBFBFB;
+}
+
+#portrait {
+    height: 100%;
+    max-width: 720px;
+    width: 100%;
+    float: right;
+    justify-content: flex-end;
+    /* background-image: url('img/DmitryAlekseev.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: auto; */
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 14px;
+}
+
+a:hover {
+    color: rgb(252, 85, 124);
+    border-bottom: 1px dotted rgb(252, 85, 124);
+}
+
+
+
+
+
+
+/*
+    api.php code: https://ideone.com/T9tMzp
+
+    webref.ru
+
+    background-image: url('/img/picture.png');
+    background-position: bottom right;
+*/
+#popupContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url('img/b.png');
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#popup {
+    width: 250px;
+    height: 300px;
+    background-color: white;
+    padding: 30px;
+}
+#popup h2 {
+    margin-top: 0;
+}
+#moneyAmount {
+    width: 100%;
+}
+#sendButton {
+    margin: 10px auto 0;
+}
