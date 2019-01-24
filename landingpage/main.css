@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+ }
+
 html, body {
     padding: 0;
     margin: 0;
@@ -23,6 +27,18 @@ nav {
     display: flex;
     align-items: center;
     letter-spacing: 1px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 14px;
+}
+
+a:hover {
+    color: rgb(252, 85, 124);
+    border-bottom: 1px dotted rgb(252, 85, 124);
 }
 
 #contact-container {
@@ -56,56 +72,78 @@ nav {
 #welcome-screen {
     height: calc(100vh - 100px);
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    background-image: url('img/DmitryAlekseev.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 #headings {
-    /* margin-top: -20%; */
-    float: left;
+    margin-top: 20%;
 }
 
 h1 {
-    font-size: 46px;
-    font-weight: 700;
-    margin-top: 0;
+    font-size: 52px;
+    font-weight: 800;
+    background-color: white;
 }
 
 h2 {
+    font-size: 18px;
+    font-weight: 100;
+    color: #797979;
+    margin-bottom: 30px;
+    background-color: white;
 }
 
-button {
-    border: 1px solid rgb(252, 85, 124);
-    color: rgb(252, 85, 124);
+.common-button {
+    border: 2px solid rgb(255, 78, 46);
+    color: white;
     padding: 12px 40px 10px;
-    background-color: #FBFBFB;
+    background-color: rgb(255, 78, 46);
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 4px 6px #fff;
 }
 
 #portrait {
     height: 100%;
-    max-width: 720px;
-    width: 100%;
+    flex: 50%;
+    /* max-width: 720px;
+    width: 100%; */
     float: right;
     justify-content: flex-end;
-    /* background-image: url('img/DmitryAlekseev.png');
+    background-image: url('img/DmitryAlekseev.png');
     background-position: right bottom;
     background-repeat: no-repeat;
-    background-size: auto; */
+    background-size: contain;
 }
 
-a {
-    color: black;
-    text-decoration: none;
-    margin-right: 30px;
-    font-size: 14px;
+@media screen and (max-width: 1300px) {
+    #welcome-screen {
+        background-position: center bottom;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    #headings {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    h1, h2 {
+        margin: 20px;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    .common-button {
+        font-size: 42px;
+        margin-top: 120px;
+    }
 }
 
-a:hover {
-    color: rgb(252, 85, 124);
-    border-bottom: 1px dotted rgb(252, 85, 124);
+#features {
+    
 }
-
-
 
 
 
