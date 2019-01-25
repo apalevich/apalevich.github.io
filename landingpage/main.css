@@ -2,6 +2,11 @@
     box-sizing: border-box;
  }
 
+ :root {
+     --gray-text: #9b9b9b;
+     --gray-background: #FBFBFB;
+ }
+
 html, body {
     padding: 0;
     margin: 0;
@@ -9,7 +14,7 @@ html, body {
 }
 
 header {
-    background-color: #FBFBFB;
+    background-color: var(--gray-background);
     height: 100px;
 }
 
@@ -54,18 +59,24 @@ a:hover {
     font-size: 24px;
 }
 
+button {
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
 #order-call {
     border: 1px solid rgb(252, 85, 124);
     color: rgb(252, 85, 124);
     padding: 12px 40px 10px;
     margin-left: 30px;
-    background-color: #FBFBFB;
+    background-color: var(--gray-background);
     letter-spacing: .1px;
 }
 
 #order-call:hover {
     border: 1px solid rgb(252, 85, 124);
-    color: #FBFBFB;
+    color: white;
     background-color: rgb(252, 85, 124);
 }
 
@@ -91,7 +102,7 @@ h1 {
 h2 {
     font-size: 18px;
     font-weight: 100;
-    color: #797979;
+    color: var(--gray-text);
     margin-bottom: 30px;
     background-color: white;
 }
@@ -102,7 +113,12 @@ h2 {
     padding: 12px 40px 10px;
     background-color: rgb(255, 78, 46);
     margin-bottom: 30px;
-    box-shadow: 0px 0px 4px 6px #fff;
+    box-shadow: 0px 0px 10px 1px #b6b6b6;
+    cursor: pointer;
+}
+
+.common-button:hover {
+    box-shadow: 0px 0px 3px 0px #8a8a8a;
 }
 
 #portrait {
@@ -138,14 +154,37 @@ h2 {
     .common-button {
         font-size: 42px;
         margin-top: 120px;
+        box-shadow: 0px 0px 4px 6px #fff;
     }
 }
 
 #features {
-    
+    padding-top: 30px;
+    text-align: center;
 }
 
+h3 {
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin: 60px;
+}
 
+#features-container {
+    display: flex;
+    margin: 60px;
+}
+
+figure {
+    text-align: center;
+    margin: 20px;
+}
+
+figcaption {
+    color: var(--gray-text);
+    font-size: 14px;
+    margin: 20px;
+}
 
 
 /*
