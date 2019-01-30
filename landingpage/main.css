@@ -11,19 +11,18 @@
         justify-content: center;
     }
 
-    header a {
+    header nav a {
         font-size: 36px;
         padding-top: 20px;
     }
-    #contact-container {
+    div#contact-container {
         float: none;
         justify-content: center;
     }
-    #contact-container * {
+    .order-call {
         font-size: 36px;
-        }
     }
-    #welcome-screen {
+    div#welcome-screen {
         background-position: center bottom;
         justify-content: center;
         align-items: flex-end;
@@ -72,7 +71,7 @@
     }
 
     #examples figure {
-        max-width: 1000px;
+        max-width: 560px;
     }
     section#banner {
         padding: 60px;
@@ -89,8 +88,7 @@
     }
 
     #contacts-container-2 img {
-        width: 36px;
-        height: 36px;
+        width: 48px;
     } 
 
     #contacts-container-2 a {
@@ -100,7 +98,14 @@
     #contacts-container-2 {
         margin-bottom: 30px;
     }
+    #contacts-container-3 img {
+        height: 42px;
+        margin-top: 60px !important;
+    }
 
+    footer#footer-black p {
+        font-size: 24px;
+    }
 }
 
 * {
@@ -367,7 +372,7 @@ footer a {
 }
 
 #footer-black p {
-    color: white;
+    color: var(--gray-text);
     font-size: 14px;
 }
 
