@@ -10,10 +10,16 @@
 <body>
     <div id="popupContainer">
         <div id="popup">
-            <h2>Отправить заявку</h2>
-            <input id="moneyAmount" type="text" name="moneyAmount" placeholder="Количество денег">
-            <hr>
-            <input type="button" id="sendButton" name="" value="Отправить!">
+            <form>
+                <h4>Отправить заявку</h4>
+                <input id="name" type="text" name="customer-name" placeholder="Ваше имя">
+                <input id="email" type="email" name="customer-email" placeholder="Ваш E-mail"><br>
+                <input id="send-button" type="button" value="Отправить!" class="common-button">
+            </form>
+            <div id="form-answer">
+                <h4>Спасибо!</h4><br>
+                <p>Я свяжусь с вами в течение 2 часов</p>
+            </div>  
         </div>
     </div>
     <header>

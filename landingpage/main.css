@@ -376,14 +376,9 @@ footer a {
     font-size: 14px;
 }
 
-/*
-    api.php code: https://ideone.com/T9tMzp
 
-    webref.ru
+    /* api.php code: https://ideone.com/T9tMzp */
 
-    background-image: url('/img/picture.png');
-    background-position: bottom right;
-*/
 #popupContainer {
     display: none;
     position: fixed;
@@ -396,14 +391,33 @@ footer a {
     align-items: center;
 }
 #popup {
-    width: 250px;
+    width: 400px;
     height: 300px;
     background-color: white;
     padding: 30px;
+    text-align: center;
 }
-#popup h2 {
-    margin-top: 0;
+#popup h4 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: var(--orange);
 }
+
+#popup input {
+    margin: 15px 0;
+    border: 0;
+    border-bottom: 1px solid #b6b6b6;
+}
+
+#popup button {
+    margin: 15px auto;
+}
+
+#form-answer {
+    text-align: center;
+    display: none;
+}
+
 #moneyAmount {
     width: 100%;
 }
